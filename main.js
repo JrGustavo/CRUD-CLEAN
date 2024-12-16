@@ -1,5 +1,5 @@
-import './style.css';
-import javascriptLogo from './javascript.svg';
+import viteLogo from "/vite.svg";
+import javascriptLogo from './src/javascript.svg';
 
 import { UsersApp } from './src/users/users-app';
 

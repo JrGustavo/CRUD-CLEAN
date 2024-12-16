@@ -1,36 +1,29 @@
-import {User} from "../models/user.js";
+import { User } from "../models/user"
 
-
-/*
-*
-* @param {Like<User>} localhostUser
-* @returns {User}
+/**
+ *
+ * @param {Like<User>} localhostUser
+ * @returns {User}
  */
+export const localhostUserToModel = ( localhostUser ) => {
 
-
-export const localhostUserModel = (localhostUser) => {
-
-    const  {
+    const {
         avatar,
         balance,
-        firstName,
+        first_name,
         gender,
         id,
         isActive,
-        lastName,
-    } = localhostUser()
+        last_name,
+    } = localhostUser;
+
     return new User({
         avatar,
         balance,
-        firstName: firstName,
+        firstName: first_name,
         gender,
         id,
         isActive,
-        lastName: lastName,
-
-    })
-
-
-
-
+        lastName: last_name,
+    });
 }
